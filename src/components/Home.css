@@ -1,0 +1,44 @@
+.home-container {
+  position: relative;
+  z-index: 0;
+}
+
+.loader-container {
+  position: fixed;
+  inset: 0;
+  background-color: black;
+  z-index: 1;
+  opacity: 1;
+  display: grid;
+  place-content: center;
+}
+
+.loader {
+  width: 4rem;
+  height: 4rem;
+  border: 0.6rem solid lime;
+  border-left-color: transparent;
+  border-right-color: transparent;
+  border-radius: 50%;
+  animation: 0.8s ease infinite alternate loader;
+}
+
+.show {
+  opacity: 1;
+  display: block;
+}
+
+.hidden {
+  display: none;
+  opacity: 0;
+}
+
+@keyframes loader {
+  from {
+    transform: rotate(0) scale(1);
+  }
+
+  to {
+    transform: rotate(1turn) scale(1.2);
+  }
+}

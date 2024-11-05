@@ -1,0 +1,114 @@
+:root {
+  --fast-transition-duration: 0.2s;
+  --very-fast-transition-duration: 0.1s
+  --transition-timing-function: ease-in-out;
+}
+
+.books-outer-container {
+  padding: 6rem;
+  padding-top: 2rem;
+  background-color: black;
+}
+
+.books-outer-container h2 {
+  font-size: 2rem;
+  color: white;
+}
+
+.books-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.books-container img {
+  transition-property: transform;
+  transform: scale(1);
+  object-fit: cover;
+}
+
+.books-container figure {
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+
+  &:hover figcaption {
+    opacity: 1;
+  }
+  &:hover figcaption::before {
+    opacity: 1;
+  }
+
+  &:hover img {
+    transform: scale(1.05);
+  }
+}
+
+.books-container figure figcaption::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  z-index: -1;
+  transition-property: opacity;
+}
+
+.books-container figure figcaption {
+  position: absolute;
+  z-index: 0;
+  color: white;
+  opacity: 0;
+  inset: 0;
+}
+
+.books-container figure figcaption h2 {
+  margin: 0;
+  position: absolute;
+  bottom: 0;
+  left: 10px;
+}
+
+.books-container figure figcaption .links {
+  margin-top: 20px;
+  position: absolute;
+  top: 0;
+  left: 10px;
+  font-size: 3rem;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  padding: 6px;
+  transition-property: background-color transform;
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.6);
+    transform: scale(0.9);
+  }
+}
+
+.books-container figure figcaption .links a{
+  color: white
+}
+
+.books-container figure img {
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
+}
+
+/* common transitions */
+/* Fast transition */
+.books-container img {
+  transition-duration: var(--fast-transition-duration);
+  transition-timing-function: var(--transition-timing-function);
+}
+
+/* Very Fast Transition */
+.books-container figure figcaption .links{
+  transition-duration: var(--very-fast-transition-duration);
+  transition-timing-function: var(--transition-timing-function);
+}
