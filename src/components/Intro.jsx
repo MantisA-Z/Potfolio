@@ -11,7 +11,7 @@ const Intro = () => {
           <h2>Hey, It's mantis here</h2>
           <p>
             I'm a web developer from India. I'm a beginner in react but I've
-            have build a couple of projects. I have the knowledge of HTML, CSS,
+            have built a couple of projects. I have the knowledge of HTML, CSS,
             Java Script, React, Node Js, Mongo DB. I use cloudinary for storing
             files. I'm in eighth standard currently. That is my profile image on
             the right side. Yeah kinda creepy, that is why I have used it.
