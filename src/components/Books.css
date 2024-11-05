@@ -1,6 +1,6 @@
 :root {
   --fast-transition-duration: 0.2s;
-  --very-fast-transition-duration: 0.1s
+  --very-fast-transition-duration: 0.1s;
   --transition-timing-function: ease-in-out;
 }
 
@@ -90,8 +90,8 @@
   }
 }
 
-.books-container figure figcaption .links a{
-  color: white
+.books-container figure figcaption .links a {
+  color: white;
 }
 
 .books-container figure img {
@@ -108,7 +108,7 @@
 }
 
 /* Very Fast Transition */
-.books-container figure figcaption .links{
+.books-container figure figcaption .links {
   transition-duration: var(--very-fast-transition-duration);
   transition-timing-function: var(--transition-timing-function);
 }
